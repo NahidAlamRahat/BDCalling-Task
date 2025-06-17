@@ -1,5 +1,6 @@
 import 'package:bd_calling_task/assets_path.dart';
 import 'package:bd_calling_task/ui/screen/sign_up_screen.dart';
+import 'package:bd_calling_task/ui/screen/verify_otp_screen.dart';
 import 'package:bd_calling_task/ui/widget/CustomButton.dart';
 import 'package:bd_calling_task/ui/widget/rich_auth_navigation_text.dart';
 import 'package:bd_calling_task/ui/widget/text_description_widget.dart';
@@ -54,7 +55,8 @@ class _RecoverResetPasswordScreenState extends State<RecoverResetPasswordScreen>
                 onPressed: () {
                   if (_formKey.currentState!.validate()) {
                    //code hare
-                    
+                    Get.toNamed(VerifyOtpScreenOtp.name);
+
                   }
                 },
               ),
@@ -133,7 +135,6 @@ class _RecoverResetPasswordScreenState extends State<RecoverResetPasswordScreen>
                       : Icons.visibility,
                 ),
                 onPressed: () {
-
                   setState(() {
                     _obscurePassword = !_obscurePassword;
                   });

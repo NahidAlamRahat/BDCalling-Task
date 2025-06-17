@@ -5,6 +5,7 @@ import 'package:bd_calling_task/ui/screen/recover_reset_password_screen.dart';
 import 'package:bd_calling_task/ui/screen/sign_in_screen.dart';
 import 'package:bd_calling_task/ui/screen/sign_up_screen.dart';
 import 'package:bd_calling_task/ui/screen/splsh_screen.dart';
+import 'package:bd_calling_task/ui/screen/verify_otp_screen.dart';
 import 'package:flutter/material.dart';
 
 class AppRoutes {
@@ -30,6 +31,9 @@ class AppRoutes {
     }
     else if (settings.name == RecoverResetPasswordScreen.name) {
       route = RecoverResetPasswordScreen();
+    }
+    else if (settings.name == VerifyOtpScreenOtp.name) {
+      route = VerifyOtpScreenOtp();
     }
 
     return MaterialPageRoute(

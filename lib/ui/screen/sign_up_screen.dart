@@ -8,6 +8,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:lottie/lottie.dart';
 
+import '../widget/showCustomDialog.dart';
+
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({super.key});
 
@@ -53,7 +55,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   onPressed: () {
                     if (_formKey.currentState!.validate()) {
                       //code hare
-                      showSuccessDialog(context);
+                      _showSuccessDialog(context);
                     }
                   },
                 ),
@@ -170,40 +172,13 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
 
 
-  void showSuccessDialog(BuildContext context) {
-    showDialog(
-      context: context,
-      barrierDismissible: true,
-      builder: (context) {
-        return Dialog(
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-          child: Padding(
-            padding: const EdgeInsets.all(20),
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                //  Lottie animation
-                Lottie.asset(AssetsAnimationPath.completeAnimation),
-                const SizedBox(height: 10),
-
-                const TitleTextWidget(title: 'Successfully Registered'),
-                const SizedBox(height: 8),
-                const TextDescriptionWidget(
-                    description: "'Your account has been registered successfully, now let\'s enjoy our features!'"),
-                const SizedBox(height: 20),
-                // Continue Button
-                SizedBox(
-                  width: double.infinity,
-                    child: CustomButton(text: 'Continue', onPressed: () {
-                      Get.offAllNamed(ProductListScreen.name);
-                    })
-                ),
-              ],
-            ),
-          ),
-        );
-      },
-    );
+  void _showSuccessDialog(BuildContext context) {
+    showCustomDialog(context: context,
+        title: 'Successfully Registered',
+        description: "'Your account has been registered successfully, now let\'s enjoy our features!'",
+        buttonText: 'Continue',
+        animationPath: AssetsAnimationPath.completeAnimation,
+        onPressed: () {Get.offAllNamed(ProductListScreen.name);});
   }
 
 

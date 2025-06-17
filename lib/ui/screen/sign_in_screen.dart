@@ -1,4 +1,5 @@
 import 'package:bd_calling_task/assets_path.dart';
+import 'package:bd_calling_task/ui/screen/product_list_screen.dart';
 import 'package:bd_calling_task/ui/screen/sign_up_screen.dart';
 import 'package:bd_calling_task/ui/widget/CustomButton.dart';
 import 'package:bd_calling_task/ui/widget/rich_auth_navigation_text.dart';
@@ -57,8 +58,8 @@ class _SignInScreenState extends State<SignInScreen> {
                 text: 'Sign In',
                 onPressed: () {
                   if (_formKey.currentState!.validate()) {
-                   //code hare
-
+                    //code hare
+                  Get.offAllNamed(ProductListScreen.name);
                   }
                 },
               ),
@@ -84,8 +85,6 @@ class _SignInScreenState extends State<SignInScreen> {
   //============================================================
   //-------------------------------------------------------------
   //=============================================================
-
-
 
   Widget _buildRowRememberMe() {
     return Row(
@@ -130,14 +129,10 @@ class _SignInScreenState extends State<SignInScreen> {
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(30),
               ),
-              contentPadding: const EdgeInsets.symmetric(
-                horizontal: 20,
-              ),
+              contentPadding: const EdgeInsets.symmetric(horizontal: 20),
             ),
             validator: (String? value) {
-              if (value
-                  ?.trim()
-                  .isEmpty ?? true) {
+              if (value?.trim().isEmpty ?? true) {
                 return 'Enter a valid email address';
               }
               return null;
@@ -156,14 +151,13 @@ class _SignInScreenState extends State<SignInScreen> {
                 return 'Enter your password';
               }
               return null;
-            },            obscureText: _obscurePassword,
+            },
+            obscureText: _obscurePassword,
             decoration: InputDecoration(
               hintText: 'Password',
               suffixIcon: IconButton(
                 icon: Icon(
-                  _obscurePassword
-                      ? Icons.visibility_off
-                      : Icons.visibility,
+                  _obscurePassword ? Icons.visibility_off : Icons.visibility,
                 ),
                 onPressed: () {
                   setState(() {
@@ -174,9 +168,7 @@ class _SignInScreenState extends State<SignInScreen> {
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(30),
               ),
-              contentPadding: const EdgeInsets.symmetric(
-                horizontal: 20,
-              ),
+              contentPadding: const EdgeInsets.symmetric(horizontal: 20),
             ),
           ),
         ],
@@ -184,8 +176,7 @@ class _SignInScreenState extends State<SignInScreen> {
     );
   }
 
-//============================================================
-//--------------------------Method End-----------------------------------
-//=============================================================
-
+  //============================================================
+  //--------------------------Method End-----------------------------------
+  //=============================================================
 }
