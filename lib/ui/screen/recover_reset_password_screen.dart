@@ -21,6 +21,8 @@ class RecoverResetPasswordScreen extends StatefulWidget {
 class _RecoverResetPasswordScreenState extends State<RecoverResetPasswordScreen> {
 
   final TextEditingController _passwordTEController = TextEditingController();
+  final TextEditingController _confirmPasswordTEController = TextEditingController();
+
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   bool _obscurePassword = true;
 
@@ -114,7 +116,7 @@ class _RecoverResetPasswordScreenState extends State<RecoverResetPasswordScreen>
           const Text('Confirm New Password'),
           const SizedBox(height: 8),
           TextFormField(
-            controller: _passwordTEController,
+            controller: _confirmPasswordTEController,
             autovalidateMode: AutovalidateMode.onUserInteraction,
             validator: (String? value) {
               if (value?.isEmpty ?? true) {
@@ -131,6 +133,7 @@ class _RecoverResetPasswordScreenState extends State<RecoverResetPasswordScreen>
                       : Icons.visibility,
                 ),
                 onPressed: () {
+
                   setState(() {
                     _obscurePassword = !_obscurePassword;
                   });
