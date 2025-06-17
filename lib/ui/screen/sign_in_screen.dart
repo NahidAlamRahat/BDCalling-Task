@@ -65,7 +65,6 @@ class _SignInScreenState extends State<SignInScreen> {
               ),
 
               const SizedBox(height: 16),
-
               Center(
                 child: RichAuthNavigationText(
                   leadingText: 'New to Theory Test? ',
