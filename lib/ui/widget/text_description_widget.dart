@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
 
 class TextDescriptionWidget extends StatelessWidget {
-
-  const TextDescriptionWidget({
-    super.key,
-    required this.description,
-  });
+  const TextDescriptionWidget({super.key, required this.description});
 
   final String description;
 

@@ -18,10 +18,7 @@ class RichAuthNavigationText extends StatelessWidget {
     return RichText(
       text: TextSpan(
         text: leadingText,
-        style: const TextStyle(
-          color: Colors.grey,
-          fontWeight: FontWeight.w500,
-        ),
+        style: const TextStyle(color: Colors.grey, fontWeight: FontWeight.w500),
         children: [
           TextSpan(
             text: ' $actionText',

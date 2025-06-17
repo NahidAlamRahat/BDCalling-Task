@@ -6,8 +6,6 @@ import 'package:bd_calling_task/ui/widget/text_description_widget.dart';
 import 'package:bd_calling_task/ui/widget/title_text_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:lottie/lottie.dart';
-
 import '../widget/showCustomDialog.dart';
 
 class SignUpScreen extends StatefulWidget {
@@ -28,7 +26,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold( 
+    return Scaffold(
       appBar: AppBar(leading: const BackButton()),
       body: SingleChildScrollView(
         child: Padding(
@@ -37,19 +35,21 @@ class _SignUpScreenState extends State<SignUpScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Center(child: const TitleTextWidget(title: 'Welcome to Eduline')),
+                Center(
+                  child: const TitleTextWidget(title: 'Welcome to Eduline'),
+                ),
                 const SizedBox(height: 8),
                 const TextDescriptionWidget(
                   description:
                       "Let's join to Eduline learning ecosystem & meet our professional mentor. It's Free!",
                 ),
-        
+
                 const SizedBox(height: 32),
-        
+
                 _buildForm(),
-        
+
                 const SizedBox(height: 24),
-        
+
                 CustomButton(
                   text: 'Label',
                   onPressed: () {
@@ -59,7 +59,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     }
                   },
                 ),
-        
+
                 const SizedBox(height: 16),
                 Center(
                   child: RichAuthNavigationText(
@@ -170,16 +170,17 @@ class _SignUpScreenState extends State<SignUpScreen> {
     );
   }
 
-
-
   void _showSuccessDialog(BuildContext context) {
-    showCustomDialog(context: context,
-        title: 'Successfully Registered',
-        description: "'Your account has been registered successfully, now let\'s enjoy our features!'",
-        buttonText: 'Continue',
-        animationPath: AssetsAnimationPath.completeAnimation,
-        onPressed: () {Get.offAllNamed(ProductListScreen.name);});
+    showCustomDialog(
+      context: context,
+      title: 'Successfully Registered',
+      description:
+          "'Your account has been registered successfully, now let\'s enjoy our features!'",
+      buttonText: 'Continue',
+      animationPath: AssetsAnimationPath.completeAnimation,
+      onPressed: () {
+        Get.offAllNamed(ProductListScreen.name);
+      },
+    );
   }
-
-
 }

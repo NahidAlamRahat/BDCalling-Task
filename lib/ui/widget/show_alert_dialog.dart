@@ -16,7 +16,8 @@ void showAlertDialog({required BuildContext context}) {
             mainAxisSize: MainAxisSize.min,
             children: [
               Lottie.asset(
-                'assets/animations/success.json', // Replace with your Lottie file
+                'assets/animations/success.json',
+                // Replace with your Lottie file
                 width: 150,
                 height: 150,
                 fit: BoxFit.fill,
@@ -24,10 +25,7 @@ void showAlertDialog({required BuildContext context}) {
               const SizedBox(height: 20),
               const Text(
                 "Let's join to Eduline learning ecosystem & meet",
-                style: TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold,
-                ),
+                style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                 textAlign: TextAlign.center,
               ),
               const SizedBox(height: 20),
@@ -43,9 +41,7 @@ void showAlertDialog({required BuildContext context}) {
               const Text(
                 "Your account has been registered successfully, now let's enjoy our features!",
                 textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontSize: 16,
-                ),
+                style: TextStyle(fontSize: 16),
               ),
               const SizedBox(height: 25),
               SizedBox(
@@ -63,10 +59,7 @@ void showAlertDialog({required BuildContext context}) {
                   },
                   child: const Text(
                     "Continue",
-                    style: TextStyle(
-                      fontSize: 16,
-                      color: Colors.white,
-                    ),
+                    style: TextStyle(fontSize: 16, color: Colors.white),
                   ),
                 ),
               ),
@@ -76,5 +69,4 @@ void showAlertDialog({required BuildContext context}) {
       );
     },
   );
-
 }

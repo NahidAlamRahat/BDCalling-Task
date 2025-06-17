@@ -7,7 +7,6 @@ class ProductListScreen extends StatelessWidget {
   final ProductController controller = Get.put(ProductController());
   static String name = 'product-list/screen';
 
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -37,8 +36,8 @@ class ProductListScreen extends StatelessWidget {
                 },
               ),
             );
-          }
-            );
+          },
+        );
       }),
     );
   }

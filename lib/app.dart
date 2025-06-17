@@ -19,8 +19,10 @@ class BdCallingTaskApp extends StatelessWidget {
 
         inputDecorationTheme: InputDecorationTheme(
           contentPadding: const EdgeInsets.symmetric(horizontal: 16),
-          hintStyle:
-          const TextStyle(color: Colors.grey, fontWeight: FontWeight.w600),
+          hintStyle: const TextStyle(
+            color: Colors.grey,
+            fontWeight: FontWeight.w600,
+          ),
           filled: true,
           fillColor: Colors.white,
           enabledBorder: OutlineInputBorder(
@@ -35,10 +37,9 @@ class BdCallingTaskApp extends StatelessWidget {
             borderRadius: BorderRadius.circular(8),
           ),
           errorBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(8),
-              borderSide: BorderSide(color: Colors.red)
+            borderRadius: BorderRadius.circular(8),
+            borderSide: BorderSide(color: Colors.red),
           ),
-
         ),
 
         elevatedButtonTheme: ElevatedButtonThemeData(
@@ -53,27 +54,15 @@ class BdCallingTaskApp extends StatelessWidget {
           ),
         ),
 
-        appBarTheme: const AppBarTheme(
-          backgroundColor: Colors.white,
-        ),
+        appBarTheme: const AppBarTheme(backgroundColor: Colors.white),
         scaffoldBackgroundColor: Colors.white,
 
         textTheme: const TextTheme(
+          titleLarge: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
 
-            titleLarge: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 30),
-
-            titleSmall: TextStyle(
-                color: Colors.grey
-            )
+          titleSmall: TextStyle(color: Colors.grey),
         ),
-
-
-
       ),
-
     );
-
   }
 }

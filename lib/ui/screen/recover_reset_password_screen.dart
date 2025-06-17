@@ -16,18 +16,18 @@ class RecoverResetPasswordScreen extends StatefulWidget {
   static String name = 'recover-reset-password-screen';
 
   @override
-  State<RecoverResetPasswordScreen> createState() => _RecoverResetPasswordScreenState();
+  State<RecoverResetPasswordScreen> createState() =>
+      _RecoverResetPasswordScreenState();
 }
 
-class _RecoverResetPasswordScreenState extends State<RecoverResetPasswordScreen> {
-
+class _RecoverResetPasswordScreenState
+    extends State<RecoverResetPasswordScreen> {
   final TextEditingController _passwordTEController = TextEditingController();
-  final TextEditingController _confirmPasswordTEController = TextEditingController();
+  final TextEditingController _confirmPasswordTEController =
+      TextEditingController();
 
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   bool _obscurePassword = true;
-
-
 
   @override
   Widget build(BuildContext context) {
@@ -42,7 +42,8 @@ class _RecoverResetPasswordScreenState extends State<RecoverResetPasswordScreen>
               Center(child: const TitleTextWidget(title: 'Reset Password')),
               const SizedBox(height: 8),
               const TextDescriptionWidget(
-                description: 'Your password must be at least 8 characters long and include a combination of letters, numbers.',
+                description:
+                    'Your password must be at least 8 characters long and include a combination of letters, numbers.',
               ),
               const SizedBox(height: 32),
 
@@ -54,13 +55,11 @@ class _RecoverResetPasswordScreenState extends State<RecoverResetPasswordScreen>
                 text: 'Continue',
                 onPressed: () {
                   if (_formKey.currentState!.validate()) {
-                   //code hare
+                    //code hare
                     Get.toNamed(VerifyOtpScreenOtp.name);
-
                   }
                 },
               ),
-
             ],
           ),
         ),
@@ -71,8 +70,6 @@ class _RecoverResetPasswordScreenState extends State<RecoverResetPasswordScreen>
   //============================================================
   //-------------------------------------------------------------
   //=============================================================
-
-
 
   Widget _buildForm() {
     return Form(
@@ -90,14 +87,13 @@ class _RecoverResetPasswordScreenState extends State<RecoverResetPasswordScreen>
                 return 'Enter your password';
               }
               return null;
-            },            obscureText: _obscurePassword,
+            },
+            obscureText: _obscurePassword,
             decoration: InputDecoration(
               hintText: 'Password',
               suffixIcon: IconButton(
                 icon: Icon(
-                  _obscurePassword
-                      ? Icons.visibility_off
-                      : Icons.visibility,
+                  _obscurePassword ? Icons.visibility_off : Icons.visibility,
                 ),
                 onPressed: () {
                   setState(() {
@@ -108,9 +104,7 @@ class _RecoverResetPasswordScreenState extends State<RecoverResetPasswordScreen>
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(30),
               ),
-              contentPadding: const EdgeInsets.symmetric(
-                horizontal: 20,
-              ),
+              contentPadding: const EdgeInsets.symmetric(horizontal: 20),
             ),
           ),
           const SizedBox(height: 16),
@@ -125,14 +119,13 @@ class _RecoverResetPasswordScreenState extends State<RecoverResetPasswordScreen>
                 return 'Enter your password';
               }
               return null;
-            },            obscureText: _obscurePassword,
+            },
+            obscureText: _obscurePassword,
             decoration: InputDecoration(
               hintText: 'Password',
               suffixIcon: IconButton(
                 icon: Icon(
-                  _obscurePassword
-                      ? Icons.visibility_off
-                      : Icons.visibility,
+                  _obscurePassword ? Icons.visibility_off : Icons.visibility,
                 ),
                 onPressed: () {
                   setState(() {
@@ -143,9 +136,7 @@ class _RecoverResetPasswordScreenState extends State<RecoverResetPasswordScreen>
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(30),
               ),
-              contentPadding: const EdgeInsets.symmetric(
-                horizontal: 20,
-              ),
+              contentPadding: const EdgeInsets.symmetric(horizontal: 20),
             ),
           ),
         ],
@@ -153,8 +144,7 @@ class _RecoverResetPasswordScreenState extends State<RecoverResetPasswordScreen>
     );
   }
 
-//============================================================
-//--------------------------Method End-----------------------------------
-//=============================================================
-
+  //============================================================
+  //--------------------------Method End-----------------------------------
+  //=============================================================
 }

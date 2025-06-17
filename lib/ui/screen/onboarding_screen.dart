@@ -6,23 +6,25 @@ import '../../assets_path.dart';
 import '../controller/onboarding_controller.dart';
 import '../widget/onboarding_page_widget.dart';
 
-
 class OnboardingScreen extends StatelessWidget {
   OnboardingScreen({super.key});
+
   static const String name = '/onboarding';
 
   final PageController _pageController = PageController();
   final controller = Get.put(OnboardingController());
 
-  final List<dynamic>pages = [
+  final List<dynamic> pages = [
     {
       "title": "Best online courses in the world",
-      "description": "Now you can learn, anywhere, even, if there is no internet access",
+      "description":
+          "Now you can learn, anywhere, even, if there is no internet access",
       "lottie": AssetsAnimationPath.stopAnimation,
     },
     {
       "title": "Explore your new skill today",
-      "description": "our platform is designed to help you explore new skill . Let's learn & grow with Eduline!",
+      "description":
+          "our platform is designed to help you explore new skill . Let's learn & grow with Eduline!",
       "lottie": AssetsAnimationPath.warningAnimation,
     },
   ];
@@ -92,7 +94,7 @@ class OnboardingScreen extends StatelessWidget {
                 ),
               );
             }),
-          )
+          ),
         ],
       ),
     );

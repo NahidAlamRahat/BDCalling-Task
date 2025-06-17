@@ -8,6 +8,7 @@ class AssetsAnimationPath{
 
 }
 
+
 class AssetsImagePath{
  static const String _imageBaseUrl= 'assets/images';
  static const String eduLogo = '$_imageBaseUrl/edu_logo.png';

@@ -13,26 +13,19 @@ class AppRoutes {
     late Widget route;
     if (settings.name == SplashScreen.name) {
       route = const SplashScreen();
-    }
-    else if (settings.name == OnboardingScreen.name) {
+    } else if (settings.name == OnboardingScreen.name) {
       route = OnboardingScreen();
-    }
-    else if (settings.name == SignInScreen.name) {
+    } else if (settings.name == SignInScreen.name) {
       route = const SignInScreen();
-    }
-    else if (settings.name == SignUpScreen.name) {
+    } else if (settings.name == SignUpScreen.name) {
       route = const SignUpScreen();
-    }
-    else if (settings.name == ProductListScreen.name) {
+    } else if (settings.name == ProductListScreen.name) {
       route = ProductListScreen();
-    }
-    else if (settings.name == ForgotPassEmailScreen.name) {
+    } else if (settings.name == ForgotPassEmailScreen.name) {
       route = ForgotPassEmailScreen();
-    }
-    else if (settings.name == RecoverResetPasswordScreen.name) {
+    } else if (settings.name == RecoverResetPasswordScreen.name) {
       route = RecoverResetPasswordScreen();
-    }
-    else if (settings.name == VerifyOtpScreenOtp.name) {
+    } else if (settings.name == VerifyOtpScreenOtp.name) {
       route = VerifyOtpScreenOtp();
     }
 
@@ -43,4 +36,3 @@ class AppRoutes {
     );
   }
 }
-

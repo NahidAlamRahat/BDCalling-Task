@@ -14,11 +14,12 @@ class ProductController extends GetxController {
     super.onInit();
   }
 
-
   Future<void> fetchProducts() async {
     try {
       isLoading(true);
-      final response = await http.get(Uri.parse("https://fakestoreapi.com/products"));
+      final response = await http.get(
+        Uri.parse("https://fakestoreapi.com/products"),
+      );
       if (response.statusCode == 200) {
         var jsonData = json.decode(response.body) as List;
         var products = jsonData.map((e) => Product.fromJson(e)).toList();

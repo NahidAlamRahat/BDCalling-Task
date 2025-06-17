@@ -20,10 +20,8 @@ class ForgotPassEmailScreen extends StatefulWidget {
 }
 
 class _ForgotPassEmailScreenState extends State<ForgotPassEmailScreen> {
-
   final TextEditingController _emailTEController = TextEditingController();
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
-
 
   @override
   Widget build(BuildContext context) {
@@ -38,7 +36,8 @@ class _ForgotPassEmailScreenState extends State<ForgotPassEmailScreen> {
               Center(child: const TitleTextWidget(title: 'Forgot Password')),
               const SizedBox(height: 8),
               const TextDescriptionWidget(
-                description: 'Enter your email, we will send a verification code to email.',
+                description:
+                    'Enter your email, we will send a verification code to email.',
               ),
               const SizedBox(height: 32),
 
@@ -50,9 +49,8 @@ class _ForgotPassEmailScreenState extends State<ForgotPassEmailScreen> {
                 text: 'Continue',
                 onPressed: () {
                   if (_formKey.currentState!.validate()) {
-                   //code hare
+                    //code hare
                     Get.toNamed(RecoverResetPasswordScreen.name);
-
                   }
                 },
               ),
@@ -79,8 +77,6 @@ class _ForgotPassEmailScreenState extends State<ForgotPassEmailScreen> {
   //-------------------------------------------------------------
   //=============================================================
 
-
-
   Widget _buildForm() {
     return Form(
       key: _formKey,
@@ -97,14 +93,10 @@ class _ForgotPassEmailScreenState extends State<ForgotPassEmailScreen> {
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(30),
               ),
-              contentPadding: const EdgeInsets.symmetric(
-                horizontal: 20,
-              ),
+              contentPadding: const EdgeInsets.symmetric(horizontal: 20),
             ),
             validator: (String? value) {
-              if (value
-                  ?.trim()
-                  .isEmpty ?? true) {
+              if (value?.trim().isEmpty ?? true) {
                 return 'Enter a valid email address';
               }
               return null;
@@ -116,8 +108,7 @@ class _ForgotPassEmailScreenState extends State<ForgotPassEmailScreen> {
     );
   }
 
-//============================================================
-//--------------------------Method End-----------------------------------
-//=============================================================
-
+  //============================================================
+  //--------------------------Method End-----------------------------------
+  //=============================================================
 }

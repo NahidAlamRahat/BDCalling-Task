@@ -10,15 +10,14 @@ import 'onboarding_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
+
   static String name = '/';
 
   @override
   State<SplashScreen> createState() => _SplashScreenState();
 }
 
-
 class _SplashScreenState extends State<SplashScreen> {
-
   @override
   void initState() {
     // TODO: implement initState
@@ -28,22 +27,23 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
-      body:  SafeArea(
-        child:  Padding(
+      body: SafeArea(
+        child: Padding(
           padding: const EdgeInsets.all(24.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Lottie.asset(AssetsAnimationPath.carAnimation,height: 260),
+              Lottie.asset(AssetsAnimationPath.carAnimation, height: 260),
               // const SizedBox(height: 16),
-              TitleTextWidget(title: 'Theory test in my language',),
+              TitleTextWidget(title: 'Theory test in my language'),
               const SizedBox(height: 16),
-              TextDescriptionWidget(description: 'I must write the real test will be in English language and this app just helps you to understand the materials in your language'),
+              TextDescriptionWidget(
+                description:
+                    'I must write the real test will be in English language and this app just helps you to understand the materials in your language',
+              ),
               const Spacer(),
               const CircularProgressIndicator(),
-
             ],
           ),
         ),
@@ -51,9 +51,8 @@ class _SplashScreenState extends State<SplashScreen> {
     );
   }
 
-  Future<void> _moveToNextScreen()async{
-    await  Future.delayed(const Duration(seconds: 5),);
+  Future<void> _moveToNextScreen() async {
+    await Future.delayed(const Duration(seconds: 5));
     Get.toNamed(OnboardingScreen.name);
   }
-
 }

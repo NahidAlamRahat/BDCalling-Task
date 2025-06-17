@@ -8,8 +8,6 @@ import 'package:bd_calling_task/ui/widget/title_text_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
-import 'package:lottie/lottie.dart';
-
 import 'forgor_pass_email_screen.dart';
 
 class SignInScreen extends StatefulWidget {
@@ -59,7 +57,7 @@ class _SignInScreenState extends State<SignInScreen> {
                 onPressed: () {
                   if (_formKey.currentState!.validate()) {
                     //code hare
-                  Get.offAllNamed(ProductListScreen.name);
+                    Get.offAllNamed(ProductListScreen.name);
                   }
                 },
               ),
