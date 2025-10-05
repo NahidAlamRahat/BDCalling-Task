@@ -5,6 +5,7 @@ class AssetsAnimationPath{
  static const String stopAnimation = '$_animationBaseUrl/stop_animation.json';
  static const String warningAnimation = '$_animationBaseUrl/warning_animation.json';
  static const String completeAnimation = '$_animationBaseUrl/complete_animation.json';
+ static const String loadingAnimation = '$_animationBaseUrl/loadingAnimation.json';
 
 }
 

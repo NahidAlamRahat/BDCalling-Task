@@ -1,9 +1,9 @@
-import 'package:bd_calling_task/ui/screen/splsh_screen.dart';
+import 'package:bd_calling_task/routes/bindings.dart';
+import 'package:bd_calling_task/routes/route_manager.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import 'app_routes.dart';
 
 class BdCallingTaskApp extends StatelessWidget {
   const BdCallingTaskApp({super.key});
@@ -12,8 +12,10 @@ class BdCallingTaskApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: '/',
-      onGenerateRoute: AppRoutes.onGenerateRoute,
+      initialRoute: RouteManager.initial,
+
+      getPages: RouteManager.getPages(),
+      initialBinding: AppBindings(),
       theme: ThemeData(
         colorSchemeSeed: Color.fromRGBO(27, 110, 247, 1),
 

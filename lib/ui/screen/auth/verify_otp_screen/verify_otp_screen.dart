@@ -1,18 +1,19 @@
 import 'dart:async';
-import 'package:bd_calling_task/ui/screen/product_list_screen.dart';
-import 'package:bd_calling_task/ui/widget/CustomButton.dart';
-import 'package:bd_calling_task/ui/widget/text_description_widget.dart';
-import 'package:bd_calling_task/ui/widget/title_text_widget.dart';
+import 'package:bd_calling_task/routes/app_routes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
-import '../../assets_path.dart';
-import '../widget/showCustomDialog.dart';
-import '../widget/show_snack_bar_message.dart';
+import '../../../../assets_path.dart';
+import '../../../widget/showCustomDialog.dart';
+import '../../../widget/show_snack_bar_message.dart';
+import '../../../widget/CustomButton.dart';
+import '../../../widget/text_description_widget.dart';
+import '../../../widget/title_text_widget.dart';
+import 'package:bd_calling_task/ui/screen/product_list_screen.dart';
+import 'package:bd_calling_task/ui/widget/app_size.dart';
 
 class VerifyOtpScreenOtp extends StatefulWidget {
   const VerifyOtpScreenOtp({super.key});
-
   static String name = 'verify-otp-screen';
 
   @override
@@ -51,15 +52,14 @@ class _VerifyOtpScreenOtpState extends State<VerifyOtpScreenOtp> {
                   context,
                 );
               },
-              child: const Text('Resent OTP'),
+              child: const Text('Resend OTP'),
             ),
           ),
-
           Visibility(
             visible: currentTime.value != 0,
             child: TextButton(
               onPressed: () {},
-              child: Text('Resent OTP in ${currentTime.value}'),
+              child: Text('Resend OTP in ${currentTime.value}'),
             ),
           ),
         ],
@@ -69,7 +69,6 @@ class _VerifyOtpScreenOtpState extends State<VerifyOtpScreenOtp> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     _startTime();
   }
@@ -79,28 +78,28 @@ class _VerifyOtpScreenOtpState extends State<VerifyOtpScreenOtp> {
     final textTheme = Theme.of(context).textTheme;
 
     return Scaffold(
+      appBar: AppBar(),
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.all(16.0),
+          padding: EdgeInsets.all(AppSize.width(value: 16)), // Making padding responsive
           child: Column(
             children: [
-              const SizedBox(height: 24),
+              SizedBox(height: AppSize.height(value: 24)),
 
-              Center(child: const TitleTextWidget(title: 'Verify Code')),
-              const SizedBox(height: 8),
+              Center(child: TitleTextWidget(title: 'Verify Code')),
+              SizedBox(height: AppSize.height(value: 8)),
               const TextDescriptionWidget(
                 description: 'Please enter the code we just sent to email',
               ),
-              const SizedBox(height: 16),
+              SizedBox(height: AppSize.height(value: 16)),
               _buildPinCodeTextField(context),
-              const SizedBox(height: 16),
+              SizedBox(height: AppSize.height(value: 16)),
               CustomButton(
                 text: 'Verify',
                 onPressed: () {
                   _showSuccessDialog(context);
                 },
               ),
-
               _buildObxCountDownMethod(),
             ],
           ),
@@ -115,11 +114,10 @@ class _VerifyOtpScreenOtpState extends State<VerifyOtpScreenOtp> {
       child: PinCodeTextField(
         validator: (value) {
           if (value?.trim().isEmpty == true) {
-            // code hare
+            // Handle empty field
           }
           return null;
         },
-
         length: 4,
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         obscureText: false,
@@ -128,8 +126,8 @@ class _VerifyOtpScreenOtpState extends State<VerifyOtpScreenOtp> {
         pinTheme: PinTheme(
           shape: PinCodeFieldShape.box,
           borderRadius: BorderRadius.circular(5),
-          fieldHeight: 50,
-          fieldWidth: 50,
+          fieldHeight: AppSize.height(value: 50),
+          fieldWidth: AppSize.width(value: 50),
           activeFillColor: Colors.white,
           inactiveFillColor: Colors.white,
           selectedFillColor: Colors.white,
@@ -148,11 +146,11 @@ class _VerifyOtpScreenOtpState extends State<VerifyOtpScreenOtp> {
       context: context,
       title: 'Successfully Registered',
       description:
-          "'Your account has been registered successfully, now let\'s enjoy our features!'",
+      "'Your account has been registered successfully, now let\'s enjoy our features!'",
       buttonText: 'Continue',
       animationPath: AssetsAnimationPath.completeAnimation,
       onPressed: () {
-        Get.offAllNamed(ProductListScreen.name);
+        Get.offAllNamed(AppRoutes.signInScreen);
       },
     );
   }
