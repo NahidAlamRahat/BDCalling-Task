@@ -13,7 +13,7 @@ class ForgotPassEmailController extends GetxController {
   // Dispose method to clean up controllers
   @override
   void onClose() {
-    emailController.dispose(); // Dispose of the controller to avoid memory leaks
+    emailController.dispose(); // Dispose of the product_list_screen to avoid memory leaks
     super.onClose();
   }
 

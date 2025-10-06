@@ -4,13 +4,12 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 import '../../../../assets_path.dart';
+import '../../../widget/app_size.dart';
 import '../../../widget/showCustomDialog.dart';
 import '../../../widget/show_snack_bar_message.dart';
 import '../../../widget/CustomButton.dart';
 import '../../../widget/text_description_widget.dart';
 import '../../../widget/title_text_widget.dart';
-import 'package:bd_calling_task/ui/screen/product_list_screen.dart';
-import 'package:bd_calling_task/ui/widget/app_size.dart';
 
 class VerifyOtpScreenOtp extends StatefulWidget {
   const VerifyOtpScreenOtp({super.key});

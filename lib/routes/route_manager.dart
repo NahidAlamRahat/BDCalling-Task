@@ -1,15 +1,13 @@
-import 'package:bd_calling_task/ui/screen/splashSCreen/controller/splash_screen_controller.dart';
 import 'package:get/get_navigation/src/routes/get_route.dart';
-import '../ui/screen/auth/forgor_pass_email_screen/forgor_pass_email_screen.dart';
-import '../ui/screen/auth/recover_reset_password_screen/recover_reset_password_screen.dart';
-import '../ui/screen/auth/sign_up_screen/sign_up_screen.dart';
-import '../ui/screen/onboarding_screen/onboarding_screen.dart';
-import '../ui/screen/auth/sign_in_screen/sign_in_screen.dart';
-import '../ui/screen/product_list_screen.dart';
-import '../ui/screen/splashSCreen/splsh_screen.dart';
-import '../ui/screen/auth/verify_otp_screen/verify_otp_screen.dart';
+import '../screen/auth/forgor_pass_email_screen/forgor_pass_email_screen.dart';
+import '../screen/auth/recover_reset_password_screen/recover_reset_password_screen.dart';
+import '../screen/auth/sign_in_screen/sign_in_screen.dart';
+import '../screen/auth/sign_up_screen/sign_up_screen.dart';
+import '../screen/auth/verify_otp_screen/verify_otp_screen.dart';
+import '../screen/onboarding_screen/onboarding_screen.dart';
+import '../screen/product_list_screen/product_list_screen.dart';
+import '../screen/splashSCreen/splsh_screen.dart';
 import 'app_routes.dart';
-import 'bindings.dart';
 
 class RouteManager {
   RouteManager._();

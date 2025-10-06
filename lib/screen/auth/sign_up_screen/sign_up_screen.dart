@@ -1,10 +1,9 @@
 import 'package:bd_calling_task/assets_path.dart';
 import 'package:bd_calling_task/routes/app_routes.dart';
-import 'package:bd_calling_task/ui/screen/auth/sign_up_screen/widget/sign_up_widget.dart';
-import 'package:bd_calling_task/ui/screen/product_list_screen.dart';
-import 'package:bd_calling_task/ui/widget/showCustomDialog.dart';
+import 'package:bd_calling_task/screen/auth/sign_up_screen/widget/sign_up_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import '../../../widget/showCustomDialog.dart';
 import 'controller/sign_up_controller.dart';
 
 
@@ -18,7 +17,7 @@ class SignUpScreen extends StatelessWidget {
     final screenHeight = MediaQuery.of(context).size.height;
     final screenWidth = MediaQuery.of(context).size.width;
 
-    // Initialize controller
+    // Initialize product_list_screen
     final SignUpController controller = Get.put(SignUpController());
 
     return Scaffold(

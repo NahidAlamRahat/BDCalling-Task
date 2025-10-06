@@ -1,5 +1,5 @@
-import 'package:bd_calling_task/ui/widget/text_description_widget.dart';
-import 'package:bd_calling_task/ui/widget/title_text_widget.dart';
+import 'package:bd_calling_task/widget/text_description_widget.dart';
+import 'package:bd_calling_task/widget/title_text_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 

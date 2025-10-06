@@ -1,9 +1,9 @@
 import 'package:bd_calling_task/routes/app_routes.dart';
-import 'package:bd_calling_task/ui/widget/button_widget/button_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import '../../widget/app_size.dart';
+import '../../widget/button_widget/button_widget.dart';
 import '../../widget/onboarding_page_widget.dart';
 import 'controller/onboarding_screen_controller.dart';
 

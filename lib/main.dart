@@ -1,4 +1,4 @@
-import 'package:bd_calling_task/ui/models/product_model.dart';
+import 'package:bd_calling_task/screen/product_list_screen/models/product_model.dart';
 import 'package:device_preview/device_preview.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/cupertino.dart';
@@ -20,7 +20,7 @@ void main() async {
 
   runApp(  DevicePreview(
     enabled: !kReleaseMode,
-    builder: (context) => BdCallingTaskApp(), // Wrap your app
+    builder: (context) => BdCallingTaskApp(),
   ),);
 
 

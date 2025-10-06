@@ -2,7 +2,6 @@ import 'package:bd_calling_task/routes/app_routes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:bd_calling_task/ui/screen/product_list_screen.dart';
 
 class SignInController extends GetxController {
   // Text Editing Controllers

@@ -4,10 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_state_manager/src/simple/get_state.dart';
-
 import '../../../../../routes/app_routes.dart';
 import '../../../../widget/app_size.dart';
-import '../../forgor_pass_email_screen/forgor_pass_email_screen.dart';
 import '../controller/sign_in_screen_controller.dart';
 
 class RememberMeRow extends StatelessWidget {

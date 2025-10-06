@@ -1,11 +1,9 @@
-import 'package:bd_calling_task/ui/widget/button_widget/button_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../../../routes/app_routes.dart';
+import '../../../widget/button_widget/button_widget.dart';
 import 'controller/recover_reset_password_controller.dart';
 import '../../../widget/app_size.dart';
-import '../verify_otp_screen/verify_otp_screen.dart';
-import '../../../widget/CustomButton.dart';
 import '../../../widget/text_description_widget.dart';
 import '../../../widget/title_text_widget.dart';
 
@@ -16,7 +14,7 @@ class RecoverResetPasswordScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Get the controller instance
+    // Get the product_list_screen instance
     final controller = Get.put(RecoverResetPasswordController());
 
     return Scaffold(
@@ -60,7 +58,7 @@ class RecoverResetPasswordScreen extends StatelessWidget {
 
   Widget _buildForm(RecoverResetPasswordController controller) {
     return Form(
-      key: controller.formKey,  // Using the formKey from the controller
+      key: controller.formKey,  // Using the formKey from the product_list_screen
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

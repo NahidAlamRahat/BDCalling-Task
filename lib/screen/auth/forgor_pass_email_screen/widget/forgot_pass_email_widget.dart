@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:bd_calling_task/ui/screen/recover_reset_password_screen.dart';
 
-import '../controller/forgot_pass_email_controller.dart';
+import '../product_list_screen/forgot_pass_email_controller.dart';
 
 class ForgotPassEmailWidget extends StatefulWidget {
   const ForgotPassEmailWidget({Key? key}) : super(key: key);
@@ -15,7 +15,7 @@ class ForgotPassEmailWidget extends StatefulWidget {
 }
 
 class _ForgotPassEmailWidgetState extends State<ForgotPassEmailWidget> {
-  final ForgotPassEmailController controller = Get.put(ForgotPassEmailController());
+  final ForgotPassEmailController product_list_screen = Get.put(ForgotPassEmailController());
   final TextEditingController _emailController = TextEditingController();
 
   @override
@@ -70,11 +70,11 @@ class _ForgotPassEmailWidgetState extends State<ForgotPassEmailWidget> {
                       ),
                     ),
                     SizedBox(height: sw(28)),
-                    _buildForm(controller, sw, fs),
+                    _buildForm(product_list_screen, sw, fs),
                     SizedBox(height: sw(24)),
-                    _buildContinueButton(controller, sw, fs),
+                    _buildContinueButton(product_list_screen, sw, fs),
                     SizedBox(height: sw(16)),
-                    _buildSignInText(controller, sw, fs),
+                    _buildSignInText(product_list_screen, sw, fs),
                     SizedBox(height: max(sw(12), 8).toDouble()), // Ensured toDouble() conversion
                   ],
                 ),
@@ -86,9 +86,9 @@ class _ForgotPassEmailWidgetState extends State<ForgotPassEmailWidget> {
     );
   }
 
-  Widget _buildForm(ForgotPassEmailController controller, double sw, double fs) {
+  Widget _buildForm(ForgotPassEmailController product_list_screen, double sw, double fs) {
     return Form(
-      key: controller.formKey,
+      key: product_list_screen.formKey,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -99,11 +99,11 @@ class _ForgotPassEmailWidgetState extends State<ForgotPassEmailWidget> {
           SizedBox(height: sw(8)),
           Obx(() {
             return TextFormField(
-              controller: _emailController,
+              product_list_screen: _emailController,
               keyboardType: TextInputType.emailAddress,
               autovalidateMode: AutovalidateMode.onUserInteraction,
               style: TextStyle(fontSize: fs(14)),
-              onChanged: (value) => controller.updateEmail(value),
+              onChanged: (value) => product_list_screen.updateEmail(value),
               decoration: InputDecoration(
                 hintText: 'Email Address',
                 hintStyle: TextStyle(fontSize: fs(14), color: const Color(0xFFB6B6B6)),
@@ -124,7 +124,7 @@ class _ForgotPassEmailWidgetState extends State<ForgotPassEmailWidget> {
                   borderSide: const BorderSide(color: Colors.redAccent, width: 1),
                 ),
               ),
-              validator: controller.validateEmail,
+              validator: product_list_screen.validateEmail,
             );
           }),
         ],
@@ -132,7 +132,7 @@ class _ForgotPassEmailWidgetState extends State<ForgotPassEmailWidget> {
     );
   }
 
-  Widget _buildContinueButton(ForgotPassEmailController controller, double sw, double fs) {
+  Widget _buildContinueButton(ForgotPassEmailController product_list_screen, double sw, double fs) {
     return SizedBox(
       width: double.infinity,
       height: sw(56),
@@ -143,7 +143,7 @@ class _ForgotPassEmailWidgetState extends State<ForgotPassEmailWidget> {
           elevation: 0,
         ),
         onPressed: () {
-          if (controller.isValidForm()) {
+          if (product_list_screen.isValidForm()) {
             Get.toNamed(RecoverResetPasswordScreen.name);
           }
         },
@@ -155,7 +155,7 @@ class _ForgotPassEmailWidgetState extends State<ForgotPassEmailWidget> {
     );
   }
 
-  Widget _buildSignInText(ForgotPassEmailController controller, double sw, double fs) {
+  Widget _buildSignInText(ForgotPassEmailController product_list_screen, double sw, double fs) {
     return Center(
       child: Wrap(
         crossAxisAlignment: WrapCrossAlignment.center,

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:bd_calling_task/ui/screen/auth/recover_reset_password_screen/recover_reset_password_screen.dart';
 import '../../../../routes/app_routes.dart';
 import '../../../widget/app_size.dart';
 import '../../../widget/button_widget/button_widget.dart';
@@ -15,7 +14,7 @@ class ForgotPassEmailScreen extends StatefulWidget {
 }
 
 class _ForgotPassEmailScreenState extends State<ForgotPassEmailScreen> {
-  final ForgotPassEmailController controller = Get.put(ForgotPassEmailController()); // Use controller
+  final ForgotPassEmailController controller = Get.put(ForgotPassEmailController()); // Use product_list_screen
 
   @override
   void dispose() {
@@ -117,7 +116,7 @@ class _ForgotPassEmailScreenState extends State<ForgotPassEmailScreen> {
     );
   }
 
-  Widget _buildEmailField(TextEditingController Tecontroller) { // Pass the controller to this widget
+  Widget _buildEmailField(TextEditingController Tecontroller) { // Pass the product_list_screen to this widget
     return TextFormField(
       autovalidateMode:  AutovalidateMode.onUserInteraction,
       controller: Tecontroller,

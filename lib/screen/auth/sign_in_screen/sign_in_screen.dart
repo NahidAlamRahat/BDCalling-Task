@@ -1,12 +1,12 @@
 import 'package:bd_calling_task/assets_path.dart';
-import 'package:bd_calling_task/ui/screen/auth/sign_in_screen/widget/sign_in_form_widget.dart';
-import 'package:bd_calling_task/ui/screen/auth/sign_in_screen/widget/sign_in_logo.dart';
-import 'package:bd_calling_task/ui/screen/auth/sign_in_screen/widget/sign_in_remember_widget.dart';
-import 'package:bd_calling_task/ui/screen/auth/sign_in_screen/widget/welcome_title_widget.dart';
-import 'package:bd_calling_task/ui/widget/button_widget/button_widget.dart';
+import 'package:bd_calling_task/screen/auth/sign_in_screen/widget/sign_in_form_widget.dart';
+import 'package:bd_calling_task/screen/auth/sign_in_screen/widget/sign_in_logo.dart';
+import 'package:bd_calling_task/screen/auth/sign_in_screen/widget/sign_in_remember_widget.dart';
+import 'package:bd_calling_task/screen/auth/sign_in_screen/widget/welcome_title_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../../widget/app_size.dart';
+import '../../../widget/button_widget/button_widget.dart';
 import 'controller/sign_in_screen_controller.dart';
 
 
@@ -21,7 +21,7 @@ class SignInScreen extends StatelessWidget {
     AppSize.size = MediaQuery.of(context).size;
     ResponsiveUtils.initialize(context);
 
-    // Initialize controller
+    // Initialize product_list_screen
     final SignInController controller = Get.put(SignInController());
 
     return Scaffold(

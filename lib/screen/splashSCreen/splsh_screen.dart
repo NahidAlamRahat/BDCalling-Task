@@ -12,7 +12,7 @@ class SplashScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // controller initialize
+    // product_list_screen initialize
     final SplashController controller = Get.put(SplashController());
 
     return Scaffold(
